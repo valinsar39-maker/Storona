@@ -143,3 +143,106 @@
     el.textContent = new Date().getFullYear();
   });
 })();
+
+/* ==========================================================================
+   Team carousel
+   ========================================================================== */
+(function () {
+  'use strict';
+  var carousel = document.querySelector('.team-carousel');
+  if (!carousel) return;
+
+  var track = carousel.querySelector('.team-track');
+  var prev = carousel.querySelector('.team-prev');
+  var next = carousel.querySelector('.team-next');
+  var dotsWrap = carousel.querySelector('.team-dots');
+  var cards = Array.prototype.slice.call(track.children);
+  if (!cards.length) return;
+
+  function gap() {
+    var g = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '24');
+    return isNaN(g) ? 24 : g;
+  }
+  function step() { return cards[0].offsetWidth + gap(); }
+  function perView() { return Math.max(1, Math.round(track.clientWidth / step())); }
+
+  /* Build dots — one per "page" */
+  var dots = [];
+  function buildDots() {
+    if (!dotsWrap) return;
+    dotsWrap.innerHTML = '';
+    dots = [];
+    var pages = Math.max(1, cards.length - perView() + 1);
+    for (var i = 0; i < pages; i++) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Перейти к сотруднику ' + (i + 1));
+      (function (idx) {
+        b.addEventListener('click', function () {
+          track.scrollTo({ left: idx * step(), behavior: 'smooth' });
+        });
+      })(i);
+      dotsWrap.appendChild(b);
+      dots.push(b);
+    }
+  }
+
+  function activeIndex() { return Math.round(track.scrollLeft / step()); }
+
+  function update() {
+    var idx = activeIndex();
+    var maxScroll = track.scrollWidth - track.clientWidth - 2;
+    if (prev) prev.disabled = track.scrollLeft <= 2;
+    if (next) next.disabled = track.scrollLeft >= maxScroll;
+    dots.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
+  }
+
+  if (next) next.addEventListener('click', function () {
+    track.scrollBy({ left: step() * Math.max(1, perView() - 0), behavior: 'smooth' });
+  });
+  if (prev) prev.addEventListener('click', function () {
+    track.scrollBy({ left: -step() * Math.max(1, perView() - 0), behavior: 'smooth' });
+  });
+
+  var ticking = false;
+  track.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () { update(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  /* Pointer drag (desktop) — touch works natively via overflow scroll */
+  var down = false, startX = 0, startLeft = 0;
+  track.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'touch') return;
+    down = true; startX = e.clientX; startLeft = track.scrollLeft;
+    track.style.cursor = 'grabbing';
+  });
+  window.addEventListener('pointermove', function (e) {
+    if (!down) return;
+    track.scrollLeft = startLeft - (e.clientX - startX);
+  });
+  window.addEventListener('pointerup', function () {
+    down = false; track.style.cursor = '';
+  });
+
+  /* Analytics: first interaction with the team carousel */
+  var fired = false;
+  function fireGoal() {
+    if (fired) return; fired = true;
+    if (typeof window.ymGoal === 'function') window.ymGoal('team_scroll');
+  }
+  track.addEventListener('scroll', fireGoal, { passive: true, once: true });
+  if (next) next.addEventListener('click', fireGoal);
+  if (prev) prev.addEventListener('click', fireGoal);
+
+  var rt;
+  window.addEventListener('resize', function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () { buildDots(); update(); }, 150);
+  });
+
+  buildDots();
+  update();
+})();
