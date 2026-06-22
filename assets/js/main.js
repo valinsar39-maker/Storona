@@ -63,6 +63,19 @@
     });
   });
 
+  /* Prefill tariff select when a plan CTA is clicked */
+  document.querySelectorAll('[data-plan]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var plan = el.getAttribute('data-plan');
+      var sel = document.querySelector('select[name="tariff"]');
+      if (sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].text === plan) { sel.selectedIndex = i; break; }
+        }
+      }
+    });
+  });
+
   /* Goal: pricing block viewed */
   var pricingBlock = document.querySelector('[data-goal-view="pricing_view"]');
   if (pricingBlock && 'IntersectionObserver' in window) {
