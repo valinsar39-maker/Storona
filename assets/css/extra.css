@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Logo image (uploaded brand emblem)
+   ========================================================================== */
+img.logo__mark {
+  height: 44px;
+  width: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.footer img.logo__mark { height: 46px; }
+
+@media (max-width: 560px) {
+  img.logo__mark { height: 38px; }
+}
+
+/* ==========================================================================
+   Section showcase media (generated graphics)
+   ========================================================================== */
+.media {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.media img { width: 100%; height: auto; display: block; }
+
+.showcase {
+  max-width: 940px;
+  margin: 0 auto 40px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+}
+
+.showcase img { width: 100%; height: auto; display: block; }
+
+/* ==========================================================================
+   Team carousel
+   ========================================================================== */
+.team-carousel { position: relative; }
+
+.team-head-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.team-head-row .section-head { margin: 0; text-align: left; max-width: 640px; }
+
+.team-nav { display: flex; gap: 12px; flex-shrink: 0; }
+
+.team-nav button {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.team-nav button:hover { background: var(--green); color: #fff; border-color: var(--green); }
+.team-nav button:disabled { opacity: 0.35; cursor: not-allowed; }
+.team-nav button:disabled:hover { background: var(--white); color: var(--navy); border-color: var(--line); }
+
+.team-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 4px 4px 16px;
+  margin: 0 -4px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.team-track::-webkit-scrollbar { display: none; }
+
+.member-card {
+  flex: 0 0 calc((100% - 3 * 24px) / 4);
+  scroll-snap-align: start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.member-card__photo {
+  aspect-ratio: 4 / 5;
+  background: var(--accent-light);
+  overflow: hidden;
+}
+
+.member-card__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.member-card__body { padding: 20px 20px 24px; }
+
+.member-card__name { font-size: 1.12rem; margin-bottom: 4px; }
+
+.member-card__role {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green);
+  background: var(--accent-light);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.member-card__desc { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+
+.team-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.team-dots button {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: var(--line);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, width 0.2s ease;
+}
+
+.team-dots button.is-active { background: var(--green); width: 26px; border-radius: 100px; }
+
+@media (max-width: 1024px) {
+  .member-card { flex-basis: calc((100% - 24px) / 2); }
+}
+
+@media (max-width: 880px) {
+  .team-head-row { flex-direction: column; align-items: stretch; }
+  .team-head-row .section-head { text-align: center; max-width: none; }
+  .team-nav { justify-content: center; }
+  .result-media-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .member-card { flex-basis: 84%; }
+}
