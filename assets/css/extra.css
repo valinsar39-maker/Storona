@@ -295,6 +295,16 @@ img.logo__mark {
   .nav.is-open .btn { display: inline-flex; }
 }
 
+/* Якоря меню не должны прятаться под sticky-header */
+#check-apartment,
+#check-seller,
+#support,
+#pricing,
+#team,
+#faq,
+#lead-form,
+#contact-form { scroll-margin-top: 110px; }
+
 /* ==========================================================================
    Hero — компактный первый экран: CTA видны без скролла, картинка широкая,
    показана целиком. Логика по утверждённому ТЗ.

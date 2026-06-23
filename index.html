@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260623e">
-  <link rel="stylesheet" href="assets/css/extra.css?v=20260623e">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260623f">
+  <link rel="stylesheet" href="assets/css/extra.css?v=20260623f">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- Yandex.Metrika counter placeholder — вставьте счётчик и window.YM_COUNTER_ID -->
@@ -25,8 +25,8 @@
     "name": "Сторона Покупателя",
     "description": "Независимое юридическое сопровождение покупки недвижимости. Проверка квартиры, продавца, документов и расчётов до перевода денег.",
     "areaServed": "Россия",
-    "telephone": "+7 (495) 120-20-80",
-    "email": "info@storonapokupatelya.ru"
+    "telephone": "+7 (917) 245-83-86",
+    "email": "Lcvmp@mail.ru"
   }
   </script>
 </head>
@@ -41,17 +41,17 @@
       </a>
 
       <nav class="nav" aria-label="Основная навигация">
-        <a href="#services">Услуги</a>
-        <a href="#check">Что проверяем</a>
-        <a href="#risks">Как работаем</a>
+        <a href="#check-apartment">Проверка квартиры</a>
+        <a href="#check-seller">Проверка продавца</a>
+        <a href="#support">Сопровождение</a>
         <a href="#pricing">Тарифы</a>
         <a href="#team">Команда</a>
         <a href="#faq">Вопросы</a>
         <a href="contacts.html">Контакты</a>
-        <a class="btn btn--primary nav-cta-mobile" href="#lead">Проверить сделку</a>
+        <a class="btn btn--primary nav-cta-mobile" href="#lead-form">Проверить сделку</a>
       </nav>
 
-      <a class="btn btn--primary header__cta" href="#lead" data-goal="cta_header">Проверить сделку</a>
+      <a class="btn btn--primary header__cta" href="#lead-form" data-goal="cta_header">Проверить сделку</a>
 
       <button class="burger" aria-label="Открыть меню" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -76,8 +76,8 @@
           </div>
 
           <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="#lead" data-goal="cta_hero">Проверить сделку</a>
-            <a class="btn btn--secondary btn--lg" href="#lead" data-goal="cta_consult">Получить консультацию</a>
+            <a class="btn btn--primary btn--lg" href="#lead-form" data-goal="cta_hero">Проверить сделку</a>
+            <a class="btn btn--secondary btn--lg" href="#lead-form" data-goal="cta_consult">Получить консультацию</a>
           </div>
         </div>
 
@@ -88,7 +88,7 @@
     </section>
 
     <!-- ====================== PAIN ====================== -->
-    <section class="section section--alt">
+    <section class="section section--alt" id="check-apartment">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Скрытые риски</span>
@@ -177,7 +177,7 @@
             <h3>Проверка объекта</h3>
             <p>Характеристики, право собственности, обременения, аресты, ограничения, перепланировки и юридический статус объекта.</p>
           </article>
-          <article class="card reveal">
+          <article class="card reveal" id="check-seller">
             <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5" stroke="currentColor" stroke-width="1.6"/></svg></div>
             <h3>Проверка продавца</h3>
             <p>Судебные споры, банкротство, исполнительные производства, признаки рисков, доверенности и обстоятельства продажи.</p>
@@ -217,7 +217,7 @@
     </section>
 
     <!-- ====================== RESULT ====================== -->
-    <section class="section">
+    <section class="section" id="support">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Результат</span>
@@ -360,7 +360,7 @@
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Семейные, наследственные риски и доверенности</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Письменное заключение: можно / нельзя / при условиях</li>
             </ul>
-            <a class="btn btn--secondary btn--block" href="#lead" data-goal="plan_zakluchenie" data-plan="Заключение">Получить заключение</a>
+            <a class="btn btn--secondary btn--block" href="#lead-form" data-goal="plan_zakluchenie" data-plan="Заключение">Получить заключение</a>
           </article>
 
           <article class="plan plan--featured reveal">
@@ -377,7 +377,7 @@
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Внесение юридически важных условий в договор</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Сопровождение до подписания договора</li>
             </ul>
-            <a class="btn btn--primary btn--block" href="#lead" data-goal="plan_sdelka" data-plan="Сделка">Взять сделку под контроль</a>
+            <a class="btn btn--primary btn--block" href="#lead-form" data-goal="plan_sdelka" data-plan="Сделка">Взять сделку под контроль</a>
           </article>
 
           <article class="plan reveal">
@@ -394,7 +394,7 @@
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Проверка акта приёма-передачи</li>
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Сопровождение до получения ключей</li>
             </ul>
-            <a class="btn btn--secondary btn--block" href="#lead" data-goal="plan_dokluchey" data-plan="До ключей">Сопроводить до ключей</a>
+            <a class="btn btn--secondary btn--block" href="#lead-form" data-goal="plan_dokluchey" data-plan="До ключей">Сопроводить до ключей</a>
           </article>
         </div>
         <p class="pricing-note">Стоимость указана для стандартных сделок. Итоговая цена зависит от региона, объекта, срочности, количества документов, сложности истории объекта, состава участников и выбранного объёма сопровождения.</p>
@@ -433,7 +433,7 @@
           </table>
         </div>
         <div style="text-align:center;margin-top:32px;">
-          <a class="btn btn--primary btn--lg" href="#lead" data-goal="cta_consult">Не знаю, какой тариф нужен — нужна консультация</a>
+          <a class="btn btn--primary btn--lg" href="#lead-form" data-goal="cta_consult">Не знаю, какой тариф нужен — нужна консультация</a>
         </div>
       </div>
     </section>
@@ -505,7 +505,7 @@
           </article>
         </div>
         <div style="text-align:center;margin-top:32px;">
-          <a class="btn btn--primary btn--lg" href="#lead" data-goal="cta_docs">Узнать, какие документы нужны в моей сделке</a>
+          <a class="btn btn--primary btn--lg" href="#lead-form" data-goal="cta_docs">Узнать, какие документы нужны в моей сделке</a>
         </div>
       </div>
     </section>
@@ -589,7 +589,7 @@
     </section>
 
     <!-- ====================== LEAD FORM ====================== -->
-    <section class="section cta-section" id="lead">
+    <section class="section cta-section" id="lead-form">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Заявка</span>
@@ -649,10 +649,10 @@
         <div>
           <h4>Контакты</h4>
           <ul>
-            <li><a href="tel:+74951202080" data-goal="phone_click">+7 (495) 120-20-80</a></li>
-            <li><a href="mailto:info@storonapokupatelya.ru">info@storonapokupatelya.ru</a></li>
-            <li><a href="https://t.me/" target="_blank" rel="noopener" data-goal="telegram_click">Telegram</a></li>
-            <li><a href="https://wa.me/" target="_blank" rel="noopener" data-goal="whatsapp_click">WhatsApp</a></li>
+            <li><a href="tel:+79172458386" data-goal="phone_click">+7 (917) 245-83-86</a></li>
+            <li><a href="mailto:Lcvmp@mail.ru">Lcvmp@mail.ru</a></li>
+            <li><a href="https://t.me/Liliya_03031993" target="_blank" rel="noopener" data-goal="telegram_click">Telegram</a></li>
+            <li><a href="https://max.ru/u/f9LHodD0cOKvPAYLXpleD3N2qbvk6agdpkLa9-tQQDycm63a1Pai1zaIuNs" target="_blank" rel="noopener" data-goal="max_click">MAX</a></li>
             <li>Казань · Татарстан · по России</li>
           </ul>
         </div>
@@ -667,9 +667,9 @@
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Сторона Покупателя. Все права защищены.</span>
         <div class="footer__socials">
-          <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram" data-goal="telegram_click"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6.4 13.6 1.6 12c-1-.3-1-.9.2-1.4L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg></a>
-          <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp" data-goal="whatsapp_click"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20z"/></svg></a>
-          <a href="mailto:info@storonapokupatelya.ru" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <a href="https://t.me/Liliya_03031993" target="_blank" rel="noopener" aria-label="Telegram" data-goal="telegram_click"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6.4 13.6 1.6 12c-1-.3-1-.9.2-1.4L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg></a>
+          <a href="https://max.ru/u/f9LHodD0cOKvPAYLXpleD3N2qbvk6agdpkLa9-tQQDycm63a1Pai1zaIuNs" target="_blank" rel="noopener" aria-label="MAX" data-goal="max_click"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg></a>
+          <a href="mailto:Lcvmp@mail.ru" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></a>
         </div>
       </div>
     </div>
@@ -677,12 +677,11 @@
 
   <!-- ====================== STICKY MOBILE CTA ====================== -->
   <div class="sticky-cta">
-    <a class="btn btn--primary" href="#lead" data-goal="cta_sticky">Проверить сделку</a>
-    <a class="sticky-cta__icon" href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram" data-goal="telegram_click"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6.4 13.6 1.6 12c-1-.3-1-.9.2-1.4L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg></a>
-    <a class="sticky-cta__icon" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp" data-goal="whatsapp_click"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20z"/></svg></a>
-    <a class="sticky-cta__icon" href="tel:+74951202080" aria-label="Позвонить" data-goal="phone_click"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3l3 5-2 2c1 2 3 4 5 5l2-2 5 3-1 4c-9 0-18-9-18-18l4-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+    <a class="btn btn--primary" href="#lead-form" data-goal="cta_sticky">Проверить сделку</a>
+    <a class="sticky-cta__icon" href="https://t.me/Liliya_03031993" target="_blank" rel="noopener" aria-label="Telegram" data-goal="telegram_click"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6.4 13.6 1.6 12c-1-.3-1-.9.2-1.4L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg></a>
+    <a class="sticky-cta__icon" href="https://max.ru/u/f9LHodD0cOKvPAYLXpleD3N2qbvk6agdpkLa9-tQQDycm63a1Pai1zaIuNs" target="_blank" rel="noopener" aria-label="MAX" data-goal="max_click"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg></a>
   </div>
 
-  <script src="assets/js/main.js?v=20260623e"></script>
+  <script src="assets/js/main.js?v=20260623f"></script>
 </body>
 </html>
