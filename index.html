@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260623d">
-  <link rel="stylesheet" href="assets/css/extra.css?v=20260623d">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260623e">
+  <link rel="stylesheet" href="assets/css/extra.css?v=20260623e">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- Yandex.Metrika counter placeholder — вставьте счётчик и window.YM_COUNTER_ID -->
@@ -43,7 +43,7 @@
       <nav class="nav" aria-label="Основная навигация">
         <a href="#services">Услуги</a>
         <a href="#check">Что проверяем</a>
-        <a href="#process">Как работаем</a>
+        <a href="#risks">Как работаем</a>
         <a href="#pricing">Тарифы</a>
         <a href="#team">Команда</a>
         <a href="#faq">Вопросы</a>
@@ -79,60 +79,85 @@
             <a class="btn btn--primary btn--lg" href="#lead" data-goal="cta_hero">Проверить сделку</a>
             <a class="btn btn--secondary btn--lg" href="#lead" data-goal="cta_consult">Получить консультацию</a>
           </div>
-
-          <p style="font-size:0.92rem;color:var(--ink-soft);margin:24px 0 0;max-width:560px;">Можно начать с заключения по объекту, сопровождения до договора или полного ведения сделки до ключей.</p>
         </div>
 
         <div class="hero__media reveal">
-          <img src="assets/images/generated/hero-legal-check-final.png" alt="Юридическая проверка объекта, продавца, документов, расчётов и рисков оспаривания сделки" class="hero__media-img" width="1145" height="1374" loading="eager" fetchpriority="high">
+          <img src="assets/images/generated/hero-homepage-wide.png" alt="Юридическая проверка объекта, продавца, документов, расчётов и рисков оспаривания сделки" class="hero__media-img" width="1586" height="992" loading="eager" fetchpriority="high">
         </div>
       </div>
     </section>
 
-    <!-- ====================== TRUST BEFORE PAYMENT ====================== -->
-    <section class="section section--alt" id="services">
+    <!-- ====================== PAIN ====================== -->
+    <section class="section section--alt">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Доверие до оплаты</span>
-          <h2>Почему нам можно оплатить проверку спокойно</h2>
-          <p>Вы оплачиваете услугу до результата проверки. Поэтому мы фиксируем работу официально, прозрачно и письменно.</p>
+          <span class="eyebrow">Скрытые риски</span>
+          <h2>Проблемная квартира редко выглядит проблемной с первого взгляда</h2>
+          <p>Покупка может выглядеть безопасной: есть выписка, продавец на связи, риелтор торопит, банк готовит ипотеку. Но риски часто находятся глубже — в истории квартиры, личности продавца, наследниках, бывших супругах, банкротстве, доверенностях, материнском капитале, расчётах и обстоятельствах сделки.</p>
         </div>
-
         <div class="showcase reveal">
-          <img src="assets/images/generated/payment-trust.webp" alt="Договор, официальная оплата на расчётный счёт и письменное заключение" loading="lazy" width="1280" height="960">
+          <img src="assets/images/generated/problem-apartment-living-room.webp" alt="Внешне благополучная квартира может скрывать юридические риски" loading="lazy" width="1280" height="960">
         </div>
-
         <div class="grid grid--3">
-          <article class="card reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 3v5h5M9 13h6M9 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <h3>Договор до начала работы</h3>
-            <p>Фиксируем состав услуги, сроки, порядок проверки и результат, который вы получите.</p>
+          <article class="card card--pain reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Продавец может выглядеть нормальным</h3>
+            <p>Но иметь долги, суды, признаки банкротства, проблемы с дееспособностью или спорные обстоятельства продажи.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M7 14h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <h3>Оплата на расчётный счёт</h3>
-            <p>Вы платите юридическому лицу, а не переводите деньги «на карту специалисту».</p>
+          <article class="card card--pain reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6"/><path d="M13 3v5h5" stroke="currentColor" stroke-width="1.6"/></svg></div>
+            <h3>Документы могут быть «на руках»</h3>
+            <p>Но не показывать всю историю рисков, наследников, бывших супругов, детей или обременений.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Письменное заключение</h3>
-            <p>По итогам проверки вы получаете документ с выводами, рисками и рекомендациями.</p>
+          <article class="card card--pain reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 21l9-16 9 16z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Риелтор может быть заинтересован в закрытии</h3>
+            <p>Даже если он хороший специалист, его задача — провести сделку. Наша задача — защитить покупателя.</p>
           </article>
-          <article class="card reveal">
+          <article class="card card--pain reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-5 8 5M5 10v9h14v-9M9 19v-5h6v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Банк проверяет не всё</h3>
+            <p>Банк смотрит на объект как на залог. Но он не становится вашим личным юристом и не проверяет все ваши риски.</p>
+          </article>
+          <article class="card card--pain reveal">
             <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <h3>Этапы и обратная связь</h3>
-            <p>Ведём сделку по этапам, сообщаем статус проверки и не пропадаем после оплаты.</p>
+            <h3>После перевода денег поздно</h3>
+            <p>Исправлять ошибку после сделки намного дороже, чем остановить риск до аванса и основной оплаты.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Ответственность по договору</h3>
-            <p>Отвечаем за качество проведённой проверки в рамках договора. Без обещаний невозможного.</p>
+          <article class="card reveal" style="background:linear-gradient(135deg,var(--green),var(--green-dark));border-color:transparent;color:#fff;">
+            <div class="card__icon" style="background:rgba(255,255,255,.16);color:#fff;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 style="color:#fff;">Пока деньги у вас — сделку можно остановить</h3>
+            <p style="color:rgba(255,255,255,.9);">Мы проверяем сделку именно в тот момент, когда у вас ещё есть выбор. Это и есть наша работа.</p>
           </article>
-          <article class="card reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M18 4v3h-3M6 20v-3h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Повторная проверка</h3>
-            <p>Если объект опасен и мы не рекомендуем покупку — бесплатно проверим следующий объект в рамках тарифа.</p>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== DISPUTE RISKS ====================== -->
+    <section class="section section--alt" id="risks">
+      <div class="container result-grid split-img">
+        <div class="reveal">
+          <span class="eyebrow">Защита от оспаривания</span>
+          <h2>Проверяем риски, из-за которых сделку могут попытаться оспорить после покупки</h2>
+          <p class="lead">Даже зарегистрированное право собственности не всегда означает, что риск исчез. Поэтому мы анализируем не только документы, но и обстоятельства сделки.</p>
+          <div class="chips" style="margin-top:18px;">
+            <div class="chip"><b>Дееспособность продавца</b></div>
+            <div class="chip"><b>Добровольность сделки</b></div>
+            <div class="chip"><b>Признаки давления</b></div>
+            <div class="chip"><b>Аномально низкая цена</b></div>
+            <div class="chip"><b>Срочность</b></div>
+            <div class="chip"><b>Доверенности</b></div>
+            <div class="chip"><b>Банкротство</b></div>
+            <div class="chip"><b>Суды</b></div>
+            <div class="chip"><b>Наследственные риски</b></div>
+            <div class="chip"><b>Семейные риски</b></div>
+            <div class="chip"><b>Несовершеннолетние</b></div>
+            <div class="chip"><b>Материнский капитал</b></div>
+          </div>
+          <p class="keyline" style="text-align:left;margin:24px 0 0;font-size:1.15rem;">Наша задача — <span>увидеть тревожные сигналы до того, как вы переведёте деньги.</span></p>
+        </div>
+        <div class="media reveal">
+          <img src="assets/images/generated/legal-risk-documents.webp" alt="Анализ юридических рисков: банкротство, наследники, супруги, доверенности, материнский капитал, срочность и давление" loading="lazy" width="1280" height="960">
         </div>
       </div>
     </section>
@@ -191,100 +216,6 @@
       </div>
     </section>
 
-    <!-- ====================== PAIN ====================== -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Скрытые риски</span>
-          <h2>Проблемная квартира редко выглядит проблемной с первого взгляда</h2>
-          <p>Покупка может выглядеть безопасной: есть выписка, продавец на связи, риелтор торопит, банк готовит ипотеку. Но риски часто находятся глубже — в истории квартиры, личности продавца, наследниках, бывших супругах, банкротстве, доверенностях, материнском капитале, расчётах и обстоятельствах сделки.</p>
-        </div>
-        <div class="showcase reveal">
-          <img src="assets/images/generated/problem-apartment-living-room.webp" alt="Внешне благополучная квартира может скрывать юридические риски" loading="lazy" width="1280" height="960">
-        </div>
-        <div class="grid grid--3">
-          <article class="card card--pain reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <h3>Продавец может выглядеть нормальным</h3>
-            <p>Но иметь долги, суды, признаки банкротства, проблемы с дееспособностью или спорные обстоятельства продажи.</p>
-          </article>
-          <article class="card card--pain reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6"/><path d="M13 3v5h5" stroke="currentColor" stroke-width="1.6"/></svg></div>
-            <h3>Документы могут быть «на руках»</h3>
-            <p>Но не показывать всю историю рисков, наследников, бывших супругов, детей или обременений.</p>
-          </article>
-          <article class="card card--pain reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 21l9-16 9 16z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-            <h3>Риелтор может быть заинтересован в закрытии</h3>
-            <p>Даже если он хороший специалист, его задача — провести сделку. Наша задача — защитить покупателя.</p>
-          </article>
-          <article class="card card--pain reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-5 8 5M5 10v9h14v-9M9 19v-5h6v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Банк проверяет не всё</h3>
-            <p>Банк смотрит на объект как на залог. Но он не становится вашим личным юристом и не проверяет все ваши риски.</p>
-          </article>
-          <article class="card card--pain reveal">
-            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <h3>После перевода денег поздно</h3>
-            <p>Исправлять ошибку после сделки намного дороже, чем остановить риск до аванса и основной оплаты.</p>
-          </article>
-          <article class="card reveal" style="background:linear-gradient(135deg,var(--green),var(--green-dark));border-color:transparent;color:#fff;">
-            <div class="card__icon" style="background:rgba(255,255,255,.16);color:#fff;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3 style="color:#fff;">Пока деньги у вас — сделку можно остановить</h3>
-            <p style="color:rgba(255,255,255,.9);">Мы проверяем сделку именно в тот момент, когда у вас ещё есть выбор. Это и есть наша работа.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== WHO IS ON YOUR SIDE ====================== -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Расстановка сил</span>
-          <h2>В сделке много участников. Но кто защищает именно покупателя?</h2>
-        </div>
-        <div class="parties">
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5" stroke="currentColor" stroke-width="1.6"/></svg> Продавец</div><p>Хочет продать объект.</p></div>
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-5 8 5M5 10v9h14v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Риелтор</div><p>Хочет провести и закрыть сделку.</p></div>
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-5 8 5M5 10v9h14v-9M9 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Банк</div><p>Защищает свой залог и кредитную модель.</p></div>
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14H7z" stroke="currentColor" stroke-width="1.6"/><path d="M10 14l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Нотариус</div><p>Удостоверяет документы и отдельные юридические действия.</p></div>
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Росреестр</div><p>Регистрирует переход права.</p></div>
-          <div class="party party--highlight reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Сторона Покупателя</div><p>Проверяет сделку в интересах покупателя и может сказать: «не покупайте».</p></div>
-        </div>
-        <p class="keyline reveal">Главная ценность независимого юриста — <span>он может остановить плохую сделку.</span></p>
-      </div>
-    </section>
-
-    <!-- ====================== DISPUTE RISKS ====================== -->
-    <section class="section section--alt">
-      <div class="container result-grid split-img">
-        <div class="reveal">
-          <span class="eyebrow">Защита от оспаривания</span>
-          <h2>Проверяем риски, из-за которых сделку могут попытаться оспорить после покупки</h2>
-          <p class="lead">Даже зарегистрированное право собственности не всегда означает, что риск исчез. Поэтому мы анализируем не только документы, но и обстоятельства сделки.</p>
-          <div class="chips" style="margin-top:18px;">
-            <div class="chip"><b>Дееспособность продавца</b></div>
-            <div class="chip"><b>Добровольность сделки</b></div>
-            <div class="chip"><b>Признаки давления</b></div>
-            <div class="chip"><b>Аномально низкая цена</b></div>
-            <div class="chip"><b>Срочность</b></div>
-            <div class="chip"><b>Доверенности</b></div>
-            <div class="chip"><b>Банкротство</b></div>
-            <div class="chip"><b>Суды</b></div>
-            <div class="chip"><b>Наследственные риски</b></div>
-            <div class="chip"><b>Семейные риски</b></div>
-            <div class="chip"><b>Несовершеннолетние</b></div>
-            <div class="chip"><b>Материнский капитал</b></div>
-          </div>
-          <p class="keyline" style="text-align:left;margin:24px 0 0;font-size:1.15rem;">Наша задача — <span>увидеть тревожные сигналы до того, как вы переведёте деньги.</span></p>
-        </div>
-        <div class="media reveal">
-          <img src="assets/images/generated/legal-risk-documents.webp" alt="Анализ юридических рисков: банкротство, наследники, супруги, доверенности, материнский капитал, срочность и давление" loading="lazy" width="1280" height="960">
-        </div>
-      </div>
-    </section>
-
     <!-- ====================== RESULT ====================== -->
     <section class="section">
       <div class="container">
@@ -315,17 +246,94 @@
       </div>
     </section>
 
-    <!-- ====================== GUARANTEE ====================== -->
-    <section class="section section--alt">
+    <!-- ====================== TRUST BEFORE PAYMENT ====================== -->
+    <section class="section section--alt" id="services">
       <div class="container">
-        <div class="guarantee reveal">
-          <div class="guarantee__inner">
-            <span class="guarantee__badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="#fff" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> 100% ответственность за нашу работу</span>
-            <h2>Если объект опасен — мы не ведём вас к покупке</h2>
-            <p>Наша задача — не подтвердить сделку любой ценой, а защитить покупателя. Если по итогам проверки мы видим критические риски, мы честно рекомендуем отказаться от покупки.</p>
-            <p>В тарифах «Сделка» и «До ключей» мы продолжаем сопровождение и помогаем проверить следующий объект в рамках условий тарифа. В тарифе «Заключение» повторная проверка следующего объекта возможна по условиям договора или со специальной скидкой.</p>
-            <span class="guarantee__highlight">Опасный объект — это не потерянные деньги за проверку. Это сохранённые деньги на покупку.</span>
-          </div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Безопасность</span>
+          <h2>Почему с нами безопасно работать</h2>
+          <p>Работаем официально, фиксируем результат письменно и сопровождаем сделку в интересах покупателя.</p>
+        </div>
+
+        <!-- TODO: заменить safe-to-work.png на версию с брендом "Сторона Покупателя", текущий файл содержит чужой бренд (VERITAS). Пока используется brand-correct payment-trust.webp -->
+        <div class="showcase reveal">
+          <img src="assets/images/generated/payment-trust.webp" alt="Официальный договор, оплата на расчётный счёт и письменное заключение" loading="lazy" width="1280" height="960">
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 3v5h5M9 13h6M9 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Работаем по договору</h3>
+            <p>Фиксируем состав услуги, сроки, порядок проверки и результат, который вы получите.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M7 14h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Оплата на расчётный счёт</h3>
+            <p>Вы платите юридическому лицу, а не переводите деньги «на карту специалисту».</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Письменное заключение</h3>
+            <p>По итогам проверки вы получаете документ с выводами, рисками и рекомендациями.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Ответственность за качество проверки</h3>
+            <p>Отвечаем за качество проведённой проверки в рамках договора. Без обещаний невозможного.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Конфиденциальность документов</h3>
+            <p>Ваши документы и данные по сделке используем только для проверки и не передаём третьим лицам.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M18 4v3h-3M6 20v-3h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Прозрачность на каждом этапе</h3>
+            <p>Ведём сделку по этапам, сообщаем статус проверки и не пропадаем после оплаты.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== WHY PROFITABLE ====================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Выгода</span>
+          <h2>Почему с нами выгодно</h2>
+          <p>Юрист до сделки стоит дешевле, чем ошибка после перевода денег. Мы помогаем сохранить деньги, время и право выбора.</p>
+        </div>
+
+        <div class="showcase reveal">
+          <img src="assets/images/generated/profitable-to-check.png" alt="Проверка до сделки стоит дешевле, чем потери после покупки проблемного объекта" loading="lazy" width="1586" height="992">
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M7 6h7a3 3 0 010 6H7m0 0h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Дешевле проверить, чем исправлять</h3>
+            <p>Проверка до сделки стоит несравнимо меньше, чем суды, потерянный аванс или покупка проблемного объекта.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M9 9h6v6H9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <h3>Можно остановиться до перевода денег</h3>
+            <p>Пока деньги у вас, вы можете отказаться от опасной сделки или изменить условия покупки.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Не платите за чужую заинтересованность</h3>
+            <p>Продавец хочет продать, риелтор хочет закрыть сделку, банк защищает залог. Мы работаем только на стороне покупателя.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Получаете письменную позицию</h3>
+            <p>Вы принимаете решение не на ощущениях, а на основании письменного заключения и понятного вывода.</p>
+          </article>
+          <article class="card reveal" style="background:linear-gradient(135deg,var(--green),var(--green-dark));border-color:transparent;color:#fff;">
+            <div class="card__icon" style="background:rgba(255,255,255,.16);color:#fff;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M18 4v3h-3M6 20v-3h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 style="color:#fff;">При опасном объекте не начинаете с нуля</h3>
+            <p style="color:rgba(255,255,255,.9);">Если объект опасен, мы честно рекомендуем отказаться и в рамках тарифа помогаем двигаться дальше к следующему объекту.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -430,28 +438,6 @@
       </div>
     </section>
 
-    <!-- ====================== PROCESS ====================== -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Процесс</span>
-          <h2>Как проходит работа</h2>
-        </div>
-        <div class="steps">
-          <div class="step reveal"><div class="step__num">1</div><h3>Разбираем вашу ситуацию</h3><p>Понимаем, выбран ли объект, внесён ли аванс, есть ли ипотека и на каком этапе сделка.</p></div>
-          <div class="step reveal"><div class="step__num">2</div><h3>Подбираем формат сопровождения</h3><p>Заключение, сопровождение до договора или полное ведение до ключей.</p></div>
-          <div class="step reveal"><div class="step__num">3</div><h3>Заключаем договор</h3><p>Фиксируем состав услуги, сроки и результат.</p></div>
-          <div class="step reveal"><div class="step__num">4</div><h3>Получаем документы</h3><p>Вы отправляете документы по объекту, продавцу и условиям сделки.</p></div>
-          <div class="step reveal"><div class="step__num">5</div><h3>Проверяем объект и продавца</h3><p>Анализируем документы, историю объекта, личность продавца, ограничения, обременения и риски оспаривания.</p></div>
-          <div class="step reveal"><div class="step__num">6</div><h3>Даём заключение</h3><p>Вы получаете письменный вывод: покупать можно, нельзя или можно только при выполнении условий.</p></div>
-          <div class="step reveal"><div class="step__num">7</div><h3>Сопровождаем следующий этап</h3><p>В зависимости от тарифа: до подписания договора или до получения ключей.</p></div>
-          <div class="step reveal" style="background:linear-gradient(135deg,var(--navy),var(--navy-2));border-color:transparent;display:flex;flex-direction:column;justify-content:center;">
-            <h3 style="color:#fff;">Вы — полноценный собственник</h3><p style="color:#CBD5E1;">Сделка пройдена осознанно и под юридическим контролем.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ====================== SAFE PAYMENTS ====================== -->
     <section class="section section--alt">
       <div class="container">
@@ -524,69 +510,6 @@
       </div>
     </section>
 
-    <!-- ====================== WHY NOT (incl. title insurance) ====================== -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Сравнение</span>
-          <h2>Почему одной проверки банка, риелтора или нотариуса недостаточно</h2>
-        </div>
-        <div class="parties">
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-5 8 5M5 10v9h14v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Риелтор</div><p>Помогает найти объект и провести сделку, но часто заинтересован в её закрытии.</p></div>
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-5 8 5M5 10v9h14v-9M9 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Банк</div><p>Проверяет объект как залог, но не становится личным юристом покупателя.</p></div>
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14H7z" stroke="currentColor" stroke-width="1.6"/><path d="M10 14l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Нотариус</div><p>Удостоверяет сделку и документы, но не анализирует всю историю объекта и риски покупателя.</p></div>
-          <div class="party reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6"/></svg> Титульное страхование</div><p>Может защищать финансово после наступления страхового случая, но не заменяет предварительную независимую проверку.</p></div>
-          <div class="party party--highlight reveal"><div class="party__name"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Сторона Покупателя</div><p>Проверяет сделку именно в интересах покупателя до перевода денег и может остановить опасную покупку.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== VS TITLE INSURANCE ====================== -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">До сделки, а не после</span>
-          <h2>Чем мы отличаемся от титульного страхования</h2>
-          <p>Титульное страхование — это финансовая защита на случай определённых событий после сделки. Но оно не заменяет независимую юридическую проверку перед покупкой.</p>
-        </div>
-        <div class="grid grid--2">
-          <article class="card card--pain reveal">
-            <h3>Титульное страхование</h3>
-            <ul class="tick">
-              <li>работает после наступления страхового случая</li>
-              <li>зависит от условий страхового договора</li>
-              <li>не всегда даёт подробную юридическую картину до сделки</li>
-              <li>требует отдельного изучения исключений и ограничений</li>
-            </ul>
-          </article>
-          <article class="card reveal" style="border-color:var(--green);">
-            <h3>Сторона Покупателя</h3>
-            <ul class="tick">
-              <li>работает до сделки</li>
-              <li>помогает увидеть риски заранее</li>
-              <li>даёт письменное заключение</li>
-              <li>может честно сказать «не покупайте»</li>
-              <li>помогает изменить условия сделки до перевода денег</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== PRINCIPLE ====================== -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="guarantee reveal">
-          <div class="guarantee__inner">
-            <h2>Мы не на стороне сделки. Мы на стороне покупателя</h2>
-            <p>Продавец хочет продать. Риелтор хочет закрыть сделку. Банк защищает свой залог. Нотариус удостоверяет документы. Росреестр регистрирует переход права.</p>
-            <p>А покупателю нужен тот, кто может спокойно сказать: «не покупайте», если сделка опасна.</p>
-            <span class="guarantee__highlight">Сторона Покупателя — это независимая позиция в вашей сделке.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ====================== TEAM ====================== -->
     <section class="section" id="team">
       <div class="container">
@@ -637,26 +560,6 @@
             </article>
           </div>
           <div class="team-dots"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== RISK EXAMPLES ====================== -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Примеры</span>
-          <h2>Какие риски можно увидеть до сделки</h2>
-        </div>
-        <div class="chips reveal">
-          <div class="chip"><b>Продавец банкротится</b><span>Сделку могут пытаться оспорить кредиторы.</span></div>
-          <div class="chip"><b>Продажа после наследства</b><span>Могут появиться наследники или спорные обстоятельства принятия наследства.</span></div>
-          <div class="chip"><b>Продажа пожилым продавцом</b><span>Споры о добровольности, понимании сделки и влиянии третьих лиц.</span></div>
-          <div class="chip"><b>Материнский капитал</b><span>Если детям не выделены доли, сделка может быть рискованной.</span></div>
-          <div class="chip"><b>Доверенность</b><span>Нужно проверять полномочия, актуальность и обстоятельства выдачи.</span></div>
-          <div class="chip"><b>Бывший супруг</b><span>Может потребоваться согласие или анализ режима имущества.</span></div>
-          <div class="chip"><b>Низкая цена</b><span>Аномально низкая цена может быть признаком будущих споров.</span></div>
-          <div class="chip"><b>Срочная продажа</b><span>Срочность может скрывать давление, долги или проблемную ситуацию.</span></div>
         </div>
       </div>
     </section>
@@ -736,7 +639,7 @@
           <h4>Компания</h4>
           <ul>
             <li><a href="index.html#check">Что проверяем</a></li>
-            <li><a href="index.html#process">Как работаем</a></li>
+            <li><a href="index.html#risks">Как работаем</a></li>
             <li><a href="index.html#pricing">Тарифы</a></li>
             <li><a href="index.html#team">Команда</a></li>
             <li><a href="index.html#faq">Вопросы</a></li>
@@ -780,6 +683,6 @@
     <a class="sticky-cta__icon" href="tel:+74951202080" aria-label="Позвонить" data-goal="phone_click"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3l3 5-2 2c1 2 3 4 5 5l2-2 5 3-1 4c-9 0-18-9-18-18l4-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
   </div>
 
-  <script src="assets/js/main.js?v=20260623d"></script>
+  <script src="assets/js/main.js?v=20260623e"></script>
 </body>
 </html>

@@ -240,11 +240,9 @@ img.logo__mark {
 /* Manrope подключается в <head> каждой страницы (см. <link> Google Fonts) */
 :root { --font: 'Manrope', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 
-/* Hero visual — цельная инфографика, показываем ПОЛНОСТЬЮ (contain, без рамок) */
+/* Hero visual — цельная широкая инфографика, показываем ПОЛНОСТЬЮ (contain, без рамок) */
 .hero__media {
   width: 100%;
-  max-width: 720px;
-  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,31 +296,42 @@ img.logo__mark {
 }
 
 /* ==========================================================================
-   Hero — 2 колонки: текст слева, крупная инфографика справа (показана целиком)
+   Hero — компактный первый экран: CTA видны без скролла, картинка широкая,
+   показана целиком. Логика по утверждённому ТЗ.
    ========================================================================== */
-@media (min-width: 1200px) {
-  .hero__grid {
-    grid-template-columns: minmax(0, 0.9fr) minmax(580px, 1.1fr);
-    gap: 56px;
+@media (min-width: 992px) {
+  .hero {
+    min-height: calc(100vh - var(--header-h));
+    padding: 32px 0 44px;
+    display: flex;
     align-items: center;
   }
-  .hero__media { max-width: 720px; }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
   .hero__grid {
-    grid-template-columns: minmax(0, 1fr) minmax(440px, 0.95fr);
-    gap: 40px;
+    grid-template-columns: minmax(0, 0.82fr) minmax(600px, 1.18fr);
+    gap: 48px;
     align-items: center;
   }
-  .hero__media { max-width: 560px; }
+  .hero__content { max-width: 560px; }
+  .hero h1 { margin-bottom: 16px; }
+  .hero__guarantee { margin-bottom: 20px; }
+  .hero__actions { margin-bottom: 0; }
+  .hero__media-img {
+    max-width: 760px;
+    max-height: calc(100vh - 175px);
+    margin: 0 auto;
+  }
 }
 @media (max-width: 991px) {
-  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero__media { max-width: 640px; margin: 0 auto; }
+  .hero { min-height: auto; padding: 44px 0 64px; display: block; }
+  .hero__grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero__content { max-width: 100%; }
+  .hero__media-img { max-width: 100%; max-height: none; }
 }
 @media (max-width: 767px) {
-  .hero { padding: 40px 0 64px; }
-  .hero__media { max-width: 100%; margin: 0; }
+  .hero { padding: 40px 0 56px; }
+  .hero h1 { font-size: 34px; line-height: 1.1; }
+  .hero__actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .hero__actions .btn { width: 100%; }
 }
 
 /* ==========================================================================
