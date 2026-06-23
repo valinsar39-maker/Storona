@@ -298,6 +298,71 @@ img.logo__mark {
   .nav.is-open .btn { display: inline-flex; }
 }
 
+/* ==========================================================================
+   Lead modal (всплывающее окно с Яндекс Формой)
+   ========================================================================== */
+.lead-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.lead-modal.is-open { display: flex; }
+.lead-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 31, 51, 0.62);
+  backdrop-filter: blur(8px);
+}
+.lead-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  background: var(--bg);
+  border: 1px solid rgba(16, 42, 67, 0.12);
+  border-radius: 28px;
+  box-shadow: 0 32px 90px rgba(11, 31, 51, 0.32);
+  padding: 32px;
+}
+.lead-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--navy);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(11, 31, 51, 0.12);
+}
+.lead-modal__header { max-width: 620px; margin-bottom: 24px; }
+.lead-modal__header h2 { margin: 12px 0 10px; font-size: clamp(28px, 3vw, 40px); line-height: 1.12; }
+.lead-modal__header p { margin: 0; color: var(--ink-soft); }
+.lead-modal__form iframe {
+  width: 100%;
+  min-height: 620px;
+  border: 0;
+  display: block;
+  border-radius: 18px;
+  background: var(--white);
+}
+body.modal-open { overflow: hidden; }
+@media (max-width: 767px) {
+  .lead-modal { padding: 12px; }
+  .lead-modal__dialog { width: 100%; max-height: calc(100vh - 24px); padding: 24px 16px 16px; border-radius: 22px; }
+  .lead-modal__close { top: 12px; right: 12px; }
+  .lead-modal__form iframe { min-height: 680px; }
+}
+
 /* Юридические страницы */
 .legal-card {
   background: var(--accent-light);

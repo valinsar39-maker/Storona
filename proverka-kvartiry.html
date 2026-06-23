@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260623g">
-  <link rel="stylesheet" href="assets/css/extra.css?v=20260623g">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260623h">
+  <link rel="stylesheet" href="assets/css/extra.css?v=20260623h">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <!-- Yandex.Metrika counter placeholder -->
 </head>
@@ -29,9 +29,9 @@
         <a href="index.html#team">Команда</a>
         <a href="index.html#faq">Вопросы</a>
         <a href="contacts.html">Контакты</a>
-        <a class="btn btn--primary nav-cta-mobile" href="#lead">Проверить сделку</a>
+        <a class="btn btn--primary nav-cta-mobile" href="#lead" data-open-lead-modal>Проверить сделку</a>
       </nav>
-      <a class="btn btn--primary header__cta" href="#lead">Проверить сделку</a>
+      <a class="btn btn--primary header__cta" href="#lead" data-open-lead-modal>Проверить сделку</a>
       <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -45,7 +45,7 @@
           <h1>Юридическая проверка квартиры перед покупкой</h1>
           <p class="lead">Проверим квартиру, продавца, документы и историю владения до аванса или основной сделки. Вы получите официальное письменное заключение и вывод: покупать можно, нельзя или можно при условиях.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="#lead" data-plan="Заключение" data-goal="plan_zakluchenie">Получить заключение</a>
+            <a class="btn btn--primary btn--lg" href="#lead" data-open-lead-modal data-plan="Заключение" data-tariff="Заключение" data-goal="plan_zakluchenie">Получить заключение</a>
             <a class="btn btn--secondary btn--lg" href="tarify.html">Все тарифы</a>
           </div>
         </div>
@@ -169,6 +169,24 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260623g"></script>
+  <!-- ====================== LEAD MODAL (Яндекс Форма) ====================== -->
+  <!-- Важно: отправка заявок на Lcvmp@mail.ru настраивается в кабинете Яндекс Форм: Интеграции → Почта → поле "Кому" -->
+  <div class="lead-modal" id="leadModal" aria-hidden="true">
+    <div class="lead-modal__overlay" data-close-modal></div>
+    <div class="lead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
+      <button class="lead-modal__close" type="button" aria-label="Закрыть окно" data-close-modal>&times;</button>
+      <div class="lead-modal__header">
+        <span class="eyebrow">Заявка на проверку сделки</span>
+        <h2 id="leadModalTitle">Проверить сделку</h2>
+        <p>Заполните форму — мы свяжемся с вами и подскажем, с чего начать проверку.</p>
+      </div>
+      <div class="lead-modal__form">
+        <script src="https://forms.yandex.ru/_static/embed.js"></script>
+        <iframe src="https://forms.yandex.ru/u/6a3a6b90068ff04311f0223a?iframe=1" frameborder="0" name="ya-form-6a3a6b90068ff04311f0223a" width="650" title="Форма заявки на проверку сделки"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js?v=20260623h"></script>
 </body>
 </html>

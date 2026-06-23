@@ -259,3 +259,43 @@
   buildDots();
   update();
 })();
+
+/* ==========================================================================
+   Lead modal — открытие Яндекс Формы по любой CTA-кнопке
+   ========================================================================== */
+(function () {
+  'use strict';
+  var modal = document.getElementById('leadModal');
+  if (!modal) return;
+
+  var openButtons = document.querySelectorAll('[data-open-lead-modal]');
+  var closeButtons = modal.querySelectorAll('[data-close-modal]');
+
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  openButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      openModal();
+    });
+  });
+
+  closeButtons.forEach(function (button) {
+    button.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+})();
