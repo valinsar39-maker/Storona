@@ -240,28 +240,62 @@ img.logo__mark {
 /* Manrope подключается в <head> каждой страницы (см. <link> Google Fonts) */
 :root { --font: 'Manrope', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 
-/* Hero visual — контейнер с молочным фоном, изображение показано ЦЕЛИКОМ (contain) */
-.hero__media {
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto;
-  aspect-ratio: 4 / 3;
-  border-radius: 28px;
+/* ==========================================================================
+   Hero — цельный первый экран: оффер слева, крупный визуал справа
+   ========================================================================== */
+.hero {
+  position: relative;
+  padding: 40px 0 52px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #F8F7F3;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  background: var(--bg);
 }
-.hero__media-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-  object-position: center;
+.hero-inner { position: relative; display: flex; align-items: center; }
+.hero-content { position: relative; z-index: 2; width: min(100%, 560px); }
+.eyebrow.hero-badge { margin-bottom: 18px; }
+.hero h1 {
+  margin: 0 0 22px;
+  font-size: clamp(40px, 4vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+}
+.hero-lead { max-width: 540px; margin: 0 0 20px; font-size: 1.15rem; line-height: 1.5; color: var(--ink-soft); }
+.hero-note {
+  position: relative;
+  max-width: 540px;
+  margin: 0 0 26px;
+  padding-left: 34px;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.hero-note::before {
+  content: "✓";
+  position: absolute;
+  left: 0; top: 2px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--accent-light);
+  color: var(--green);
+  font-size: 13px; font-weight: 800;
+}
+.hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.hero-actions .btn { min-width: 220px; }
+.hero-visual {
+  position: absolute;
+  z-index: 1;
+  right: -72px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(70vw, 1120px);
+  pointer-events: none;
+}
+.hero-visual img { width: 100%; height: auto; display: block; object-fit: contain; }
+
+@media (min-width: 992px) {
+  .hero { min-height: calc(100vh - var(--header-h)); display: flex; align-items: center; padding: 36px 0 48px; }
+  .hero-inner { min-height: calc(100vh - 184px); width: 100%; }
 }
 
 /* Hero trust chips (replaces plain bullets) */
@@ -386,46 +420,21 @@ body.modal-open { overflow: hidden; }
 #contact-form { scroll-margin-top: 110px; }
 
 /* ==========================================================================
-   Hero — цельный первый экран: текст слева компактный, картинка справа,
-   CTA видны сразу. Композиция по утверждённому ТЗ.
+   Hero — адаптив (tablet / mobile): картинка в обычный поток после CTA
    ========================================================================== */
-@media (min-width: 992px) {
-  .hero {
-    min-height: calc(100vh - var(--header-h));
-    padding: 28px 0 40px;
-    display: flex;
-    align-items: center;
-  }
-  .hero__grid {
-    grid-template-columns: minmax(420px, 520px) minmax(560px, 1fr);
-    gap: 40px;
-    align-items: center;
-  }
-  .hero__content { max-width: 560px; }
-  .hero h1 {
-    font-size: clamp(44px, 4.2vw, 60px);
-    line-height: 0.98;
-    letter-spacing: -0.02em;
-    max-width: 520px;
-    margin-bottom: 20px;
-  }
-  .hero__sub { max-width: 540px; font-size: 1.12rem; line-height: 1.5; margin-bottom: 20px; }
-  .hero__result { max-width: 540px; padding: 18px 22px; margin-bottom: 16px; }
-  .hero__guarantee { margin-top: 4px; margin-bottom: 22px; max-width: 540px; }
-  .hero__actions { margin-bottom: 0; gap: 16px; }
-  .hero__actions .btn { min-width: 240px; }
-}
 @media (max-width: 991px) {
   .hero { min-height: auto; padding: 40px 0 56px; display: block; }
-  .hero__grid { display: flex; flex-direction: column; gap: 28px; }
-  .hero__content { max-width: 100%; }
-  .hero__media { order: 2; }
+  .hero-inner { min-height: auto; flex-direction: column; align-items: stretch; gap: 28px; }
+  .hero-content { width: 100%; }
+  .hero-visual { position: relative; right: auto; top: auto; transform: none; width: 100%; margin-top: 4px; }
+  .hero-visual img { width: 100%; height: auto; }
 }
 @media (max-width: 767px) {
-  .hero { padding: 32px 0 48px; }
-  .hero h1 { font-size: 34px; line-height: 1.1; }
-  .hero__actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
-  .hero__actions .btn { width: 100%; min-width: 0; }
+  .hero h1 { font-size: 34px; line-height: 1.08; }
+  .hero-lead { font-size: 1rem; line-height: 1.55; }
+  .hero-note { font-size: 0.95rem; }
+  .hero-actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .hero-actions .btn { width: 100%; min-width: 0; }
 }
 
 /* ==========================================================================
