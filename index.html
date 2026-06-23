@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260623m">
-  <link rel="stylesheet" href="assets/css/extra.css?v=20260623m">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260623n">
+  <link rel="stylesheet" href="assets/css/extra.css?v=20260623n">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- Yandex.Metrika counter placeholder — вставьте счётчик и window.YM_COUNTER_ID -->
@@ -302,12 +302,20 @@
         <div class="section-head reveal">
           <span class="eyebrow">Безопасность</span>
           <h2>Почему с нами безопасно работать</h2>
-          <p>Работаем официально, фиксируем результат письменно и сопровождаем сделку в интересах покупателя.</p>
+          <p>Работаем официально, фиксируем договорённости письменно и сопровождаем покупателя до безопасного решения по сделке.</p>
         </div>
 
         <!-- TODO: заменить safe-to-work.png на версию с брендом "Сторона Покупателя", текущий файл содержит чужой бренд (VERITAS). Пока используется brand-correct payment-trust.webp -->
         <div class="showcase reveal">
           <img src="assets/images/generated/payment-trust.webp" alt="Официальный договор, оплата на расчётный счёт и письменное заключение" loading="lazy" width="1280" height="960">
+        </div>
+
+        <div class="safe-work-note reveal">
+          <span class="safe-work-note__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Наша задача — не просто выдать заключение, а помочь вам принять безопасное решение до перевода денег.</h3>
+            <p>Договор, расчётный счёт и письменная фиксация результата нужны для того, чтобы вы понимали условия работы, этапы проверки и ответственность за выполненную услугу.</p>
+          </div>
         </div>
 
         <div class="grid grid--3">
@@ -731,6 +739,12 @@
 
   <!-- ====================== LEAD MODAL (Яндекс Форма) ====================== -->
   <!-- Важно: отправка заявок на Lcvmp@mail.ru настраивается в кабинете Яндекс Форм: Интеграции → Почта → поле "Кому" -->
+  <!--
+    Важно: Яндекс Форма вставлена через iframe, поэтому стили сайта не могут
+    полностью изменить поля и кнопку внутри формы. Для 100% фирменного дизайна
+    нужно заменить iframe на собственную HTML-форму с отправкой через
+    backend / webhook / Telegram / email.
+  -->
   <div class="lead-modal" id="leadModal" aria-hidden="true">
     <div class="lead-modal__overlay" data-close-modal></div>
     <div class="lead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
@@ -747,6 +761,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=20260623m"></script>
+  <script src="assets/js/main.js?v=20260623n"></script>
 </body>
 </html>

@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260623m">
-  <link rel="stylesheet" href="assets/css/extra.css?v=20260623m">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260623n">
+  <link rel="stylesheet" href="assets/css/extra.css?v=20260623n">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -124,6 +124,12 @@
 
   <!-- ====================== LEAD MODAL (Яндекс Форма) ====================== -->
   <!-- Важно: отправка заявок на Lcvmp@mail.ru настраивается в кабинете Яндекс Форм: Интеграции → Почта → поле "Кому" -->
+  <!--
+    Важно: Яндекс Форма вставлена через iframe, поэтому стили сайта не могут
+    полностью изменить поля и кнопку внутри формы. Для 100% фирменного дизайна
+    нужно заменить iframe на собственную HTML-форму с отправкой через
+    backend / webhook / Telegram / email.
+  -->
   <div class="lead-modal" id="leadModal" aria-hidden="true">
     <div class="lead-modal__overlay" data-close-modal></div>
     <div class="lead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
@@ -140,6 +146,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=20260623m"></script>
+  <script src="assets/js/main.js?v=20260623n"></script>
 </body>
 </html>
