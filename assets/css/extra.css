@@ -444,6 +444,32 @@ body.modal-open { overflow: hidden; }
 .plan__price-main { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1; }
 .plan__price-note { font-size: 0.88rem; font-weight: 600; color: var(--ink-soft); line-height: 1.3; }
 
+/* Тарифы без цены — мягкая формулировка вместо суммы */
+.plan__price--soft {
+  display: block;
+  background: var(--accent-light);
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 13px 16px;
+  border-radius: var(--r-sm);
+  margin: 16px 0 6px;
+}
+
+/* Блок «Почему с нами выгодно» — сетка карточек и крупное изображение */
+.profit-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 991px) { .profit-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 767px) { .profit-cards { grid-template-columns: 1fr; } }
+.profit-visual { margin: 8px 0 40px; width: 100%; }
+.profit-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(11, 31, 51, 0.12);
+}
+
 /* ==========================================================================
    Парный split-блок «текст + крупное изображение» (риски/документы с лупой)
    ========================================================================== */
