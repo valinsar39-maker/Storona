@@ -422,16 +422,48 @@ body.modal-open { overflow: hidden; }
   background: var(--white);
   border: 1px solid rgba(16, 42, 67, 0.08);
   border-radius: 24px;
-  padding: 28px;
+  padding: 30px;
+  min-height: 220px;
   box-shadow: 0 14px 40px rgba(11, 31, 51, 0.06);
 }
-.support-card h3 { margin: 0 0 12px; color: var(--navy); }
-.support-card p { margin: 0; color: var(--ink-soft); }
+.support-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  background: var(--accent-light);
+  color: var(--green);
+}
+.support-card__icon svg { width: 28px; height: 28px; }
+.support-card h3 { margin: 0 0 12px; font-size: 1.35rem; line-height: 1.16; color: var(--navy); }
+.support-card p { margin: 0; font-size: 1.02rem; line-height: 1.55; color: var(--ink-soft); }
+
+/* CTA-плашка после карточек сопровождения */
+.support-cta {
+  margin-top: 32px;
+  padding: 28px 32px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(15, 95, 74, 0.10), rgba(255, 255, 255, 0.78));
+  border: 1px solid rgba(15, 95, 74, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.support-cta h3 { margin: 0 0 8px; font-size: 1.55rem; line-height: 1.2; color: var(--navy); }
+.support-cta p { margin: 0; color: var(--ink-soft); font-size: 1.02rem; line-height: 1.45; }
+.support-cta .btn { flex-shrink: 0; }
+
 @media (max-width: 991px) { .support-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 767px) {
   .support-grid { grid-template-columns: 1fr; }
   .support-visual { padding: 10px; border-radius: 20px; }
   .support-visual img { border-radius: 16px; }
+  .support-cta { flex-direction: column; align-items: flex-start; padding: 24px; }
+  .support-cta .btn { width: 100%; }
 }
 
 /* Светло-зелёная плашка-вывод под карточками результата */
@@ -465,7 +497,17 @@ body.modal-open { overflow: hidden; }
 #team,
 #faq,
 #lead-form,
-#contact-form { scroll-margin-top: 110px; }
+#contact-form { scroll-margin-top: 120px; }
+@media (max-width: 767px) {
+  #check-apartment,
+  #check-seller,
+  #support,
+  #pricing,
+  #team,
+  #faq,
+  #lead-form,
+  #contact-form { scroll-margin-top: 96px; }
+}
 
 /* ==========================================================================
    Hero — адаптив (tablet / mobile): картинка в обычный поток после CTA
