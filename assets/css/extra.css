@@ -240,25 +240,28 @@ img.logo__mark {
 /* Manrope подключается в <head> каждой страницы (см. <link> Google Fonts) */
 :root { --font: 'Manrope', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 
-/* Hero visual — цельная широкая инфографика, показываем ПОЛНОСТЬЮ (contain, без рамок) */
+/* Hero visual — контейнер с молочным фоном, изображение показано ЦЕЛИКОМ (contain) */
 .hero__media {
   width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 28px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* без карточной обёртки: изображение само содержит фон/тени/карточки */
-  background: none;
+  background: #F8F7F3;
   border: none;
   box-shadow: none;
-  border-radius: 0;
-  overflow: visible;
   padding: 0;
 }
 .hero__media-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: contain;
+  object-position: center;
 }
 
 /* Hero trust chips (replaces plain bullets) */
@@ -295,6 +298,18 @@ img.logo__mark {
   .nav.is-open .btn { display: inline-flex; }
 }
 
+/* Юридические страницы */
+.legal-card {
+  background: var(--accent-light);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 18px 22px;
+  margin: 0 0 28px;
+}
+.legal-card p { margin: 0 0 6px; color: var(--ink); }
+.legal-card p:last-child { margin: 0; }
+.legal-updated { color: var(--ink-soft); font-size: 0.9rem; margin: 0 0 24px; }
+
 /* Якоря меню не должны прятаться под sticky-header */
 #check-apartment,
 #check-seller,
@@ -306,42 +321,46 @@ img.logo__mark {
 #contact-form { scroll-margin-top: 110px; }
 
 /* ==========================================================================
-   Hero — компактный первый экран: CTA видны без скролла, картинка широкая,
-   показана целиком. Логика по утверждённому ТЗ.
+   Hero — цельный первый экран: текст слева компактный, картинка справа,
+   CTA видны сразу. Композиция по утверждённому ТЗ.
    ========================================================================== */
 @media (min-width: 992px) {
   .hero {
     min-height: calc(100vh - var(--header-h));
-    padding: 32px 0 44px;
+    padding: 28px 0 40px;
     display: flex;
     align-items: center;
   }
   .hero__grid {
-    grid-template-columns: minmax(0, 0.82fr) minmax(600px, 1.18fr);
-    gap: 48px;
+    grid-template-columns: minmax(420px, 520px) minmax(560px, 1fr);
+    gap: 40px;
     align-items: center;
   }
   .hero__content { max-width: 560px; }
-  .hero h1 { margin-bottom: 16px; }
-  .hero__guarantee { margin-bottom: 20px; }
-  .hero__actions { margin-bottom: 0; }
-  .hero__media-img {
-    max-width: 760px;
-    max-height: calc(100vh - 175px);
-    margin: 0 auto;
+  .hero h1 {
+    font-size: clamp(44px, 4.2vw, 60px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    max-width: 520px;
+    margin-bottom: 20px;
   }
+  .hero__sub { max-width: 540px; font-size: 1.12rem; line-height: 1.5; margin-bottom: 20px; }
+  .hero__result { max-width: 540px; padding: 18px 22px; margin-bottom: 16px; }
+  .hero__guarantee { margin-top: 4px; margin-bottom: 22px; max-width: 540px; }
+  .hero__actions { margin-bottom: 0; gap: 16px; }
+  .hero__actions .btn { min-width: 240px; }
 }
 @media (max-width: 991px) {
-  .hero { min-height: auto; padding: 44px 0 64px; display: block; }
-  .hero__grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero { min-height: auto; padding: 40px 0 56px; display: block; }
+  .hero__grid { display: flex; flex-direction: column; gap: 28px; }
   .hero__content { max-width: 100%; }
-  .hero__media-img { max-width: 100%; max-height: none; }
+  .hero__media { order: 2; }
 }
 @media (max-width: 767px) {
-  .hero { padding: 40px 0 56px; }
+  .hero { padding: 32px 0 48px; }
   .hero h1 { font-size: 34px; line-height: 1.1; }
   .hero__actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
-  .hero__actions .btn { width: 100%; }
+  .hero__actions .btn { width: 100%; min-width: 0; }
 }
 
 /* ==========================================================================

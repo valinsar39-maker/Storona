@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260623f">
-  <link rel="stylesheet" href="assets/css/extra.css?v=20260623f">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260623g">
+  <link rel="stylesheet" href="assets/css/extra.css?v=20260623g">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <!-- Yandex.Metrika counter placeholder -->
 </head>
@@ -108,7 +108,8 @@
             <div class="field"><label for="phone">Телефон</label><input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required><span class="field__error">Укажите корректный номер</span></div>
             <div class="field field--full"><label for="tariff">Какой тариф вас интересует?</label><select id="tariff" name="tariff"><option>Заключение</option><option>Сделка</option><option>До ключей</option><option>Пока не знаю, нужна консультация</option></select></div>
             <div class="field field--full"><label for="comment">Комментарий по сделке</label><textarea id="comment" name="comment" placeholder="Кратко опишите объект и ситуацию"></textarea></div>
-            <label class="consent"><input type="checkbox" name="consent" required><span>Я согласен(на) на обработку персональных данных и ознакомлен(а) с <a href="privacy.html" target="_blank">политикой конфиденциальности</a>.</span></label>
+            <label class="consent"><input type="checkbox" name="consent" required><span>Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" target="_blank">Политикой обработки персональных данных</a> и даёте <a href="consent-pdn.html" target="_blank">Согласие на обработку персональных данных</a>.</span></label>
+            <label class="consent"><input type="checkbox" name="ads_consent"><span>Я согласен(на) получать <a href="consent-ads.html" target="_blank">информационные и рекламные сообщения</a>.</span></label>
             <div class="field field--full"><button type="submit" class="btn btn--primary btn--lg btn--block">Получить консультацию</button></div>
             <p class="form-foot">Ответим в течение рабочего дня. Работаем по договору. Оплата на расчётный счёт.</p>
           </div>
@@ -119,16 +120,55 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__bottom" style="border:none;padding-top:0;">
-        <span>© <span data-year>2026</span> Сторона Покупателя. <a href="index.html" style="color:#94A3B8;">На главную</a> · <a href="privacy.html" style="color:#94A3B8;">Политика конфиденциальности</a> · <a href="consent.html" style="color:#94A3B8;">Согласие на обработку ПДн</a></span>
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo" href="index.html">
+            <img class="logo__mark" src="emblem.png" alt="Сторона Покупателя" width="34" height="44">
+            <span class="logo__text"><b>Сторона</b><span>Покупателя</span></span>
+          </a>
+          <p class="footer__about">Независимая юридическая защита покупателей недвижимости: проверка объекта, продавца, документов и расчётов до перевода денег.</p>
+        </div>
+        <div>
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="proverka-kvartiry.html">Проверка квартиры</a></li>
+            <li><a href="proverka-prodavca.html">Проверка продавца</a></li>
+            <li><a href="soprovozhdenie-sdelki.html">Сопровождение сделки</a></li>
+            <li><a href="tarify.html">Тарифы</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:+79172458386" data-goal="phone_click">+7 (917) 245-83-86</a></li>
+            <li><a href="mailto:Lcvmp@mail.ru" data-goal="email_click">Lcvmp@mail.ru</a></li>
+            <li><a href="https://t.me/Liliya_03031993" target="_blank" rel="noopener" data-goal="telegram_click">Telegram</a></li>
+            <li><a href="https://max.ru/u/f9LHodD0cOKvPAYLXpleD3N2qbvk6agdpkLa9-tQQDycm63a1Pai1zaIuNs" target="_blank" rel="noopener" data-goal="max_click">MAX</a></li>
+            <li>г. Казань, ул. Ершова, 1А,<br>БЦ «Альянс», офис 26</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Документы</h4>
+          <ul>
+            <li><a href="privacy.html">Политика обработки персональных данных</a></li>
+            <li><a href="consent-pdn.html">Согласие на обработку персональных данных</a></li>
+            <li><a href="consent-ads.html">Согласие на получение рекламных сообщений</a></li>
+            <li><a href="cookies.html">Использование cookie</a></li>
+            <li><a href="consent-publication.html">Согласие на публикацию отзывов</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Сторона Покупателя · ИП Шарафутдинова Лилия Рашидовна · ИНН 730696452943 · г. Казань, ул. Ершова, 1А, БЦ «Альянс», офис 26</span>
         <div class="footer__socials">
-          <a href="tel:+79172458386" aria-label="Телефон"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 3l3 5-2 2c1 2 3 4 5 5l2-2 5 3-1 4c-9 0-18-9-18-18l4-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+          <a href="https://t.me/Liliya_03031993" target="_blank" rel="noopener" aria-label="Telegram" data-goal="telegram_click"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6.4 13.6 1.6 12c-1-.3-1-.9.2-1.4L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg></a>
+          <a href="https://max.ru/u/f9LHodD0cOKvPAYLXpleD3N2qbvk6agdpkLa9-tQQDycm63a1Pai1zaIuNs" target="_blank" rel="noopener" aria-label="MAX" data-goal="max_click"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg></a>
           <a href="mailto:Lcvmp@mail.ru" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260623f"></script>
+  <script src="assets/js/main.js?v=20260623g"></script>
 </body>
 </html>
