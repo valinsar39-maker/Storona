@@ -469,20 +469,24 @@ body.modal-open { overflow: hidden; }
 .support-cta p { margin: 0; color: var(--ink-soft); font-size: 1.02rem; line-height: 1.45; }
 .support-cta .btn { flex-shrink: 0; }
 
-/* Плашка «безопасно работать» под изображением договора/оплаты */
+/* Плашка «безопасно работать» — центральный вывод блока */
 .safe-work-note {
-  margin-top: 28px;
-  padding: 24px 28px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, rgba(15, 95, 74, 0.10), rgba(255, 255, 255, 0.82));
+  margin: 32px auto 44px;
+  padding: 30px 36px;
+  max-width: 1040px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(15, 95, 74, 0.10), rgba(255, 255, 255, 0.86));
   border: 1px solid rgba(15, 95, 74, 0.18);
+  box-shadow: 0 16px 44px rgba(11, 31, 51, 0.07);
   display: flex;
-  gap: 18px;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .safe-work-note__icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
   border-radius: 16px;
   background: var(--accent-light);
   color: var(--green);
@@ -491,9 +495,16 @@ body.modal-open { overflow: hidden; }
   justify-content: center;
   flex: 0 0 auto;
 }
-.safe-work-note h3 { margin: 0 0 8px; font-size: 1.3rem; line-height: 1.2; color: var(--navy); }
-.safe-work-note p { margin: 0; font-size: 1rem; line-height: 1.5; color: var(--ink-soft); }
-@media (max-width: 767px) { .safe-work-note { flex-direction: column; padding: 22px; } }
+.safe-work-note__icon svg { width: 28px; height: 28px; }
+.safe-work-note__content { max-width: 820px; }
+.safe-work-note h3 { margin: 0 0 12px; font-size: 1.4rem; line-height: 1.28; color: var(--navy); }
+.safe-work-note p { margin: 0; font-size: 1.02rem; line-height: 1.55; color: var(--ink-soft); }
+@media (max-width: 767px) {
+  .safe-work-note { margin: 28px auto 32px; padding: 24px 20px; border-radius: 22px; }
+  .safe-work-note__icon { width: 48px; height: 48px; margin-bottom: 16px; }
+  .safe-work-note h3 { font-size: 1.25rem; line-height: 1.25; }
+  .safe-work-note p { font-size: 0.95rem; line-height: 1.5; }
+}
 
 @media (max-width: 991px) { .support-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 767px) {
