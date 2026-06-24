@@ -311,31 +311,57 @@
   'use strict';
   var YM_ID = 110106539;
 
-  function reachGoal(goal) {
+  function reachGoal(goal, cb) {
     if (typeof window.ym === 'function') {
-      try { window.ym(YM_ID, 'reachGoal', goal); } catch (e) { /* no-op */ }
+      try { window.ym(YM_ID, 'reachGoal', goal, {}, (typeof cb === 'function' ? cb : undefined)); return; }
+      catch (e) { /* no-op */ }
     }
+    if (typeof cb === 'function') cb();
   }
   window.ymReach = reachGoal;
 
-  /* Делегирование кликов: телефон / Telegram / MAX / тариф.
-     Один клик пользователя = одно событие. */
+  /* Делегирование кликов на document (capture-фаза — срабатывает даже если
+     ссылка в модалке или другой обработчик остановил всплытие).
+     Один клик пользователя = одно событие на категорию. */
   document.addEventListener('click', function (event) {
-    var el = event.target.closest ? event.target.closest('a, button') : null;
+    var el = event.target && event.target.closest ? event.target.closest('a, button') : null;
     if (!el) return;
 
-    var href = (el.getAttribute('href') || '').toLowerCase();
+    /* Тариф — отдельная цель (может сочетаться с открытием формы) */
     var dataGoal = el.getAttribute('data-goal') || '';
-
     if (el.hasAttribute('data-tariff') || dataGoal.indexOf('plan_') === 0) {
       reachGoal('tariff_click');
     }
+
+    var href = (el.getAttribute('href') || '').toLowerCase();
+    if (!href) return;
+
+    var goal = null;
     if (href.indexOf('tel:') === 0) {
-      reachGoal('click_phone');
-    } else if (href.indexOf('t.me/') !== -1) {
-      reachGoal('click_telegram');
-    } else if (href.indexOf('max.ru/') !== -1) {
-      reachGoal('click_messenger');
+      goal = 'click_phone';
+    } else if (href.indexOf('t.me') !== -1 || href.indexOf('telegram') !== -1 || href.indexOf('tg:') === 0) {
+      goal = 'click_telegram';
+    } else if (href.indexOf('max.ru') !== -1 || href.indexOf('wa.me') !== -1 ||
+               href.indexOf('whatsapp') !== -1 || href.indexOf('viber') !== -1) {
+      goal = 'click_messenger';
     }
-  });
+    if (!goal) return;
+
+    /* Открытие в новой вкладке / звонок / модификаторы — переход не задерживаем */
+    var newTab = el.getAttribute('target') === '_blank';
+    if (newTab || goal === 'click_phone' || event.defaultPrevented ||
+        event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey) {
+      reachGoal(goal);
+      return;
+    }
+
+    /* Та же вкладка: сначала отправляем цель, затем переходим (чтобы браузер
+       не оборвал отправку). Навигация — в колбэке Метрики + страховочный таймаут. */
+    event.preventDefault();
+    var url = el.href;
+    var navigated = false;
+    function go() { if (navigated) return; navigated = true; window.location.href = url; }
+    reachGoal(goal, go);
+    setTimeout(go, 600);
+  }, true);
 })();
