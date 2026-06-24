@@ -303,8 +303,9 @@
 
 /* ==========================================================================
    Яндекс Метрика — цели (счётчик 110106539)
-   Цели: open_form, lead_submit, click_phone, click_telegram,
-         click_messenger, tariff_click
+   Цели: open_form, click_phone, click_telegram, click_messenger, tariff_click
+   Примечание: lead_submit НЕ фиксируется внешним кодом — успешная отправка
+   заявки отслеживается внутри Яндекс Формы (событие ya-forms_submit).
    ========================================================================== */
 (function () {
   'use strict';
@@ -335,32 +336,6 @@
       reachGoal('click_telegram');
     } else if (href.indexOf('max.ru/') !== -1) {
       reachGoal('click_messenger');
-    }
-  });
-
-  /* lead_submit:
-     1) надёжно — при загрузке thanks.html (страница успеха встроенных форм);
-     2) best-effort — сообщение об успешной отправке из iframe Яндекс Формы. */
-  var leadFired = false;
-  function fireLeadSubmit() {
-    if (leadFired) return;
-    leadFired = true;
-    reachGoal('lead_submit');
-  }
-
-  if (/thanks\.html$/i.test(location.pathname)) {
-    fireLeadSubmit();
-  }
-
-  window.addEventListener('message', function (event) {
-    if (typeof event.origin !== 'string' || event.origin.indexOf('yandex') === -1) return;
-    var data = event.data;
-    var text = typeof data === 'string' ? data : '';
-    if (typeof data === 'object' && data) {
-      try { text = JSON.stringify(data); } catch (e) { text = ''; }
-    }
-    if (/(submit|success|complete|thank|spasibo|sent)/i.test(text)) {
-      fireLeadSubmit();
     }
   });
 })();
