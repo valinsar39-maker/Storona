@@ -275,6 +275,7 @@
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
+    if (window.ymReach) window.ymReach('open_form');
   }
   function closeModal() {
     modal.classList.remove('is-open');
@@ -296,6 +297,70 @@
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape' && modal.classList.contains('is-open')) {
       closeModal();
+    }
+  });
+})();
+
+/* ==========================================================================
+   Яндекс Метрика — цели (счётчик 110106539)
+   Цели: open_form, lead_submit, click_phone, click_telegram,
+         click_messenger, tariff_click
+   ========================================================================== */
+(function () {
+  'use strict';
+  var YM_ID = 110106539;
+
+  function reachGoal(goal) {
+    if (typeof window.ym === 'function') {
+      try { window.ym(YM_ID, 'reachGoal', goal); } catch (e) { /* no-op */ }
+    }
+  }
+  window.ymReach = reachGoal;
+
+  /* Делегирование кликов: телефон / Telegram / MAX / тариф.
+     Один клик пользователя = одно событие. */
+  document.addEventListener('click', function (event) {
+    var el = event.target.closest ? event.target.closest('a, button') : null;
+    if (!el) return;
+
+    var href = (el.getAttribute('href') || '').toLowerCase();
+    var dataGoal = el.getAttribute('data-goal') || '';
+
+    if (el.hasAttribute('data-tariff') || dataGoal.indexOf('plan_') === 0) {
+      reachGoal('tariff_click');
+    }
+    if (href.indexOf('tel:') === 0) {
+      reachGoal('click_phone');
+    } else if (href.indexOf('t.me/') !== -1) {
+      reachGoal('click_telegram');
+    } else if (href.indexOf('max.ru/') !== -1) {
+      reachGoal('click_messenger');
+    }
+  });
+
+  /* lead_submit:
+     1) надёжно — при загрузке thanks.html (страница успеха встроенных форм);
+     2) best-effort — сообщение об успешной отправке из iframe Яндекс Формы. */
+  var leadFired = false;
+  function fireLeadSubmit() {
+    if (leadFired) return;
+    leadFired = true;
+    reachGoal('lead_submit');
+  }
+
+  if (/thanks\.html$/i.test(location.pathname)) {
+    fireLeadSubmit();
+  }
+
+  window.addEventListener('message', function (event) {
+    if (typeof event.origin !== 'string' || event.origin.indexOf('yandex') === -1) return;
+    var data = event.data;
+    var text = typeof data === 'string' ? data : '';
+    if (typeof data === 'object' && data) {
+      try { text = JSON.stringify(data); } catch (e) { text = ''; }
+    }
+    if (/(submit|success|complete|thank|spasibo|sent)/i.test(text)) {
+      fireLeadSubmit();
     }
   });
 })();
