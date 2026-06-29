@@ -786,3 +786,182 @@ img { height: auto; }
     font-size: 16px !important;
   }
 }
+/* ===================== Global mobile polish ===================== */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    padding-bottom: 96px;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .section {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Все длинные CTA на мобильной версии */
+  .btn,
+  .btn--lg,
+  .btn--block,
+  a.btn,
+  button.btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 58px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    line-height: 1.25 !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Чтобы длинные кнопки в тарифах не вылезали вправо */
+  .pricing .btn,
+  .plans .btn,
+  .plan .btn,
+  .compare .btn,
+  .documents .btn,
+  .support .btn {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Блок с картинкой дома после первого экрана */
+  .hero-visual,
+  .profit-comparison,
+  .hero__visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 28px !important;
+  }
+
+  .hero-visual img,
+  .profit-comparison img,
+  .hero__visual img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 22px !important;
+    object-fit: cover !important;
+  }
+
+  /* Если картинка дома стоит отдельным блоком, делаем её компактнее */
+  .profit-comparison {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Нижняя липкая панель не должна перекрывать контент */
+  .sticky-cta,
+  .mobile-sticky,
+  .sticky-cta-mobile {
+    padding: 10px 18px calc(10px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .sticky-cta .btn,
+  .mobile-sticky .btn,
+  .sticky-cta-mobile .btn {
+    min-height: 56px !important;
+    font-size: 18px !important;
+  }
+
+  /* Блок обращения */
+  .founder-message__card {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 28px 20px !important;
+  }
+
+  .founder-message__visual {
+    width: 100% !important;
+    order: -1;
+  }
+
+  .founder-message__visual img {
+    width: 100% !important;
+    max-height: 420px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+  .founder-message__content h2 {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+  }
+
+  .founder-message__content p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Блок чек-листа */
+  .lead-magnet__card {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 28px 20px !important;
+  }
+
+  .lead-magnet__visual {
+    width: 100% !important;
+    transform: none !important;
+    order: -1;
+  }
+
+  .lead-magnet__content h2 {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+  }
+
+  .lead-magnet__content p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .founder-message__card,
+  .lead-magnet__card {
+    padding: 24px 18px !important;
+    border-radius: 24px !important;
+  }
+
+  .founder-message__content h2,
+  .lead-magnet__content h2 {
+    font-size: 30px !important;
+  }
+
+  .btn,
+  .btn--lg,
+  .btn--block {
+    font-size: 17px !important;
+  }
+}
