@@ -965,3 +965,9 @@ img { height: auto; }
     font-size: 17px !important;
   }
 }
+/* Скрываем большую картинку дома на мобильной версии */
+@media (max-width: 768px) {
+  .profit-comparison {
+    display: none !important;
+  }
+}
