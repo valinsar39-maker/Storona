@@ -775,7 +775,45 @@
       </div>
     </div>
   </div>
+<!-- Exit offer popup -->
+<div class="exit-offer-popup" id="exitOfferPopup" aria-hidden="true">
+  <div class="exit-offer-popup__overlay" data-exit-popup-close></div>
 
+  <div class="exit-offer-popup__content" role="dialog" aria-modal="true" aria-labelledby="exitOfferTitle">
+    <button class="exit-offer-popup__close" type="button" data-exit-popup-close aria-label="Закрыть">
+      
+    </button>
+
+    <div class="exit-offer-popup__badge">Бесплатная консультация</div>
+
+    <h2 class="exit-offer-popup__title" id="exitOfferTitle">
+      Не переводите деньги, пока не проверите сделку
+    </h2>
+
+    <p class="exit-offer-popup__text">
+      Оставьте телефон — подскажем, какие риски могут быть в квартире, документах или продавце до аванса или основной оплаты.
+    </p>
+
+    <form class="exit-offer-popup__form" id="exitOfferForm">
+      <input
+        class="exit-offer-popup__input"
+        type="tel"
+        name="phone"
+        placeholder="Ваш телефон"
+        required
+      >
+
+      <button class="exit-offer-popup__button" type="submit">
+        Проверить риски
+      </button>
+    </form>
+
+    <p class="exit-offer-popup__note">
+      Консультация ни к чему не обязывает. Сначала разберём вашу ситуацию.
+    </p>
+  </div>
+</div>
+  
   <script src="assets/js/main.js?v=20260623s"></script>
 </body>
 </html>
