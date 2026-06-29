@@ -971,3 +971,15 @@ img { height: auto; }
     display: none !important;
   }
 }
+@media (max-width: 768px) {
+  .profit-comparison,
+  .profit-comparison.reveal,
+  div.profit-comparison,
+  div.profit-comparison.reveal {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
