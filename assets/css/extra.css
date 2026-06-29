@@ -983,3 +983,13 @@ img { height: auto; }
     padding: 0 !important;
   }
 }
+/* Скрываем главный визуал с домом на мобильной версии */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .hero-visual.mobile-hide {
+    display: none !important;
+  }
+}
