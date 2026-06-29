@@ -271,12 +271,33 @@
   var openButtons = document.querySelectorAll('[data-open-lead-modal]');
   var closeButtons = modal.querySelectorAll('[data-close-modal]');
 
-  function openModal() {
+  var modalEyebrow = modal.querySelector('.lead-modal__header .eyebrow');
+  var modalTitle = modal.querySelector('#leadModalTitle');
+  var modalText = modal.querySelector('.lead-modal__header p');
+
+  var defaultEyebrow = 'ЗАЯВКА НА ПРОВЕРКУ СДЕЛКИ';
+  var defaultTitle = 'Проверить сделку';
+  var defaultText = 'Оставьте телефон — мы свяжемся с вами, уточним ситуацию и подскажем, с чего начать проверку.';
+
+  function setModalContent(trigger) {
+    var eyebrow = trigger.getAttribute('data-modal-eyebrow') || defaultEyebrow;
+    var title = trigger.getAttribute('data-modal-title') || defaultTitle;
+    var text = trigger.getAttribute('data-modal-text') || defaultText;
+
+    if (modalEyebrow) modalEyebrow.textContent = eyebrow;
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalText) modalText.textContent = text;
+  }
+
+  function openModal(trigger) {
+    if (trigger) setModalContent(trigger);
+
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     if (window.ymReach) window.ymReach('open_form');
   }
+
   function closeModal() {
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
@@ -286,7 +307,7 @@
   openButtons.forEach(function (button) {
     button.addEventListener('click', function (event) {
       event.preventDefault();
-      openModal();
+      openModal(button);
     });
   });
 
